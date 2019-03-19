@@ -1,4 +1,4 @@
 # hackerank-exercises
 Excersises from HackerRank
 
-Minimum Swaps [a relative link](minimumSwaps/README.md)
+[Minimum Swaps](https://github.com/concongo/hackerank-exercises/tree/master/minimunSwaps)
