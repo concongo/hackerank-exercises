@@ -6,38 +6,30 @@ import random
 import re
 import sys
 
+
+def swap(arr, i, j):
+    tmp = arr[i]
+    arr[i] = arr[j]
+    arr[j] = tmp
+
+
+
 # Complete the minimumSwaps function below.
 def minimumSwaps(arr):
-    swaps = 0
-    swapped = False
+    ''' Final Solution based on enumarated array '''
+
+    annotated = [*enumerate(arr)]
+    annotated.sort(key = lambda it: it[1])
+    count = 0
     i = 0
-    k = 0
-
     while i < len(arr):
-        while k < len(arr) and not swapped:
+        if annotated[i][0] == i:
+            i += 1
+            continue
+        swap(annotated, i, annotated[i][0])
+        count += 1
 
-            if arr[i] > arr[k]:
-                f = arr[i]
-                s = arr[k]
-                for l in range(k, len(arr)):
-                    if arr[l] < s:
-                        s = arr[l]
-                        k = l
-                arr[i] = s
-                arr[k] = f
-                swaps = swaps + 1
-                swapped = True
-            else:
-                k = k + 1
-        if not swapped:
-            i = i + 1
-            k = i
-        else:
-            i = 0
-            k = 0
-            swapped = False
-
-    return swaps
+    return count
         
 
 if __name__ == '__main__':
