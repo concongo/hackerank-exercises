@@ -1,0 +1,38 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+def find_pairs(k, arr):
+    pairs = 0
+    for i in range(1,len(arr)):
+        if (arr[0] + arr[i]) % k == 0:
+            pairs += 1
+    return pairs
+
+# Complete the divisibleSumPairs function below.
+def divisibleSumPairs(n, k, ar):
+    pairs = 0
+    for i in range(n):
+        pairs += find_pairs(k, ar[i:n])
+    return pairs
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    nk = input().split()
+
+    n = int(nk[0])
+
+    k = int(nk[1])
+
+    ar = list(map(int, input().rstrip().split()))
+
+    result = divisibleSumPairs(n, k, ar)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
