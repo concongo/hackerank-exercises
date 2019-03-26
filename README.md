@@ -5,3 +5,4 @@ Excersises from HackerRank
 * [Orange and Apple](https://github.com/concongo/hackerank-exercises/tree/master/orangesAndApples)
 * [Breaking Records](https://github.com/concongo/hackerank-exercises/tree/master/breakingTheRecords)
 * [Birthday Chocolate](https://github.com/concongo/hackerank-exercises/tree/master/birthdayChocolate)
+* [Divisible Sum Pairs](https://github.com/concongo/hackerank-exercises/tree/master/divisibleSumPairs)
